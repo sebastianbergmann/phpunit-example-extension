@@ -1,0 +1,30 @@
+{
+  "name": "phpunit/example-extension",
+  "description": "Example of an extension for PHPUnit",
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "Sebastian Bergmann",
+      "email": "sebastian@phpunit.de",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/sebastianbergmann/phpunit-example-extension/issues"
+  },
+  "require": {
+    "php": "^5.6 || ^7.0",
+    "phpunit/phpunit": "^5.7"
+  },
+  "autoload": {
+    "classmap": [
+      "src/"
+    ]
+  },
+  "extra": {
+    "branch-alias": {
+        "dev-master": "1.0.x-dev"
+    }
+  }
+}
+
