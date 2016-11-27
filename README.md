@@ -42,7 +42,7 @@ PHPUnit 5.7.0 by Sebastian Bergmann and contributors.
 
 Runtime:       PHP 7.1.0 with Xdebug 2.5.0
 Configuration: /home/sb/example/phpunit.xml
-Extension:     /home/sb/example/tools/phpunit.d/example-example-extension-1.0.0.phar
+Extension:     phpunit/phpunit-example-extension 1.0.0
 
 .                                                                   1 / 1 (100%)
 
