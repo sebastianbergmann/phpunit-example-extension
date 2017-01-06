@@ -30,7 +30,7 @@ The example below shows how to configure PHPUnit to load all `*.phar` files foun
 </phpunit>
 ```
 
-PHPUnit will only load a an extension PHAR if it provides valid manifest information in a [manifest.xml](https://github.com/sebastianbergmann/phpunit-example-extension/blob/master/manifest.xml) file:
+PHPUnit will only load an extension PHAR if it provides valid manifest information in a [manifest.xml](https://github.com/sebastianbergmann/phpunit-example-extension/blob/master/manifest.xml) file:
 
 Of course, the extension to be loaded must also be compatible with the version of PHPUnit trying to load it. The extension provides the information required for this compatbility check in its manifest.
 
