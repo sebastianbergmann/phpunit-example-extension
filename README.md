@@ -25,7 +25,7 @@ The example below shows how to configure PHPUnit to load all `*.phar` files foun
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/5.7/phpunit.xsd"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/6.0/phpunit.xsd"
          extensionsDirectory="tools/phpunit.d">
 </phpunit>
 ```
@@ -38,11 +38,11 @@ When verbose output is activated, PHPUnit will print loaded extension PHARs:
 
 ```
 $ phpunit --verbose tests
-PHPUnit 5.7.0 by Sebastian Bergmann and contributors.
+PHPUnit 6.0.0 by Sebastian Bergmann and contributors.
 
-Runtime:       PHP 7.1.0 with Xdebug 2.5.0
+Runtime:       PHP 7.1.0 with Xdebug 2.5.1
 Configuration: /home/sb/example/phpunit.xml
-Extension:     phpunit/phpunit-example-extension 1.0.0
+Extension:     phpunit/phpunit-example-extension 1.0.1
 
 .                                                                   1 / 1 (100%)
 
