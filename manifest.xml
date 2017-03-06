@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <phar xmlns="https://phar.io/xml/manifest/1.0">
-    <contains name="phpunit/phpunit-example-extension" version="1.0.0" type="extension">
-        <extension for="phpunit/phpunit" compatible="^5.7"/>
+    <contains name="phpunit/phpunit-example-extension" version="1.0.1" type="extension">
+        <extension for="phpunit/phpunit" compatible="^5.7 || ^6.0"/>
     </contains>
 
     <copyright>
