@@ -40,6 +40,13 @@
             <arg path="${basedir}/build/phpunit-example-extension-${version}.phar" />
             <arg path="${basedir}/build" />
         </exec>
+
+        <delete includeemptydirs="true">
+            <fileset dir="${basedir}/build">
+                <include name="**/*"/>
+                <exclude name="phpunit-example-extension-${version}.phar"/>
+            </fileset>
+        </delete>
     </target>
 
     <target name="-get-version-number-from-git">
