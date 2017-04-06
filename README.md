@@ -17,7 +17,7 @@ $ composer require --dev phpunit/example-extension
 If you use PHPUnit 5.7 (or later) from a [PHP Archive (PHAR)](https://php.net/phar) then you can download a PHAR of the PHPUnit example extension:
 
 ```
-$ wget https://phar.phpunit.de/phpunit-example-extension-1.0.0.phar
+$ wget https://phar.phpunit.de/phpunit-example-extension.phar
 ```
 
 The example below shows how to configure PHPUnit to load all `*.phar` files found in a given directory (`tools/phpunit.d` in this example):

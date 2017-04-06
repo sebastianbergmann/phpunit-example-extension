@@ -10,17 +10,12 @@
 
 namespace PHPUnit\ExampleExtension;
 
-use SebastianBergmann\Comparator\Factory as ComparatorFactory;
-
-trait TestCaseTrait
+interface Comparable
 {
     /**
-     * @beforeClass
+     * @param Comparable $other
+     *
+     * @return int
      */
-    public static function init()
-    {
-        $factory = ComparatorFactory::getInstance();
-
-        $factory->register(new Comparator);
-    }
+    public function compareTo(Comparable $other);
 }
