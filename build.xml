@@ -6,6 +6,7 @@
         <delete dir="${basedir}/build"/>
         <delete dir="${basedir}/tools"/>
         <delete dir="${basedir}/vendor"/>
+        <delete file="${basedir}/manifest.xml.in"/>
 
         <property name="clean.done" value="true"/>
     </target>
@@ -24,7 +25,8 @@
 
     <target name="package" depends="prepare,-get-version-number-from-git" description="Package as PHAR">
         <copy todir="${basedir}/build" file="${basedir}/LICENSE" />
-        <copy todir="${basedir}/build" file="${basedir}/manifest.xml" />
+        <copy tofile="${basedir}/build/manifest.xml" file="${basedir}/manifest.xml.in" />
+        <replace file="${basedir}/build/manifest.xml" token="@@version@@" value="${version}"/>
         <copy todir="${basedir}/build/phpunit-example-extension">
             <fileset dir="${basedir}/src">
                 <include name="**/*" />

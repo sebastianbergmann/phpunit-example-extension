@@ -30,7 +30,25 @@ The example below shows how to configure PHPUnit to load all `*.phar` files foun
 </phpunit>
 ```
 
-PHPUnit will only load an extension PHAR if it provides valid manifest information in a [manifest.xml](https://github.com/sebastianbergmann/phpunit-example-extension/blob/master/manifest.xml) file:
+PHPUnit will only load a an extension PHAR if it provides valid manifest information in a `manifest.xml` file:
+
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<phar xmlns="https://phar.io/xml/manifest/1.0">
+    <contains name="phpunit/phpunit-example-extension" version="2.0.1" type="extension">
+        <extension for="phpunit/phpunit" compatible="^5.7 || ^6.0"/>
+    </contains>
+
+    <copyright>
+        <author name="Sebastian Bergmann" email="sebastian@phpunit.de"/>
+        <license type="BSD-3-Clause" url="https://github.com/sebastianbergmann/phpunit-example-extension/blob/master/LICENSE"/>
+    </copyright>
+
+    <requires>
+        <php version="^5.6 || ^7.0"/>
+    </requires>
+</phar>
+```
 
 Of course, the extension to be loaded must also be compatible with the version of PHPUnit trying to load it. The extension provides the information required for this compatbility check in its manifest.
 
@@ -38,11 +56,11 @@ When verbose output is activated, PHPUnit will print loaded extension PHARs:
 
 ```
 $ phpunit --verbose tests
-PHPUnit 6.0.0 by Sebastian Bergmann and contributors.
+PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
 
-Runtime:       PHP 7.1.0 with Xdebug 2.5.1
+Runtime:       PHP 7.1.4 with Xdebug 2.5.3
 Configuration: /home/sb/example/phpunit.xml
-Extension:     phpunit/phpunit-example-extension 1.0.1
+Extension:     phpunit/phpunit-example-extension 2.0.1
 
 .                                                                   1 / 1 (100%)
 
