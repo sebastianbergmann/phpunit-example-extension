@@ -49,6 +49,14 @@
                 <exclude name="phpunit-example-extension-${version}.phar"/>
             </fileset>
         </delete>
+
+        <exec executable="gpg" failonerror="true" taskname="gpg">
+            <arg value="--local-user"/>
+            <arg value="sb@sebastian-bergmann.de"/>
+            <arg value="--armor"/>
+            <arg value="--detach-sign"/>
+            <arg path="${basedir}/build/phpunit-example-extension-${version}.phar"/>
+        </exec>
     </target>
 
     <target name="-get-version-number-from-git">
