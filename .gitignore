@@ -2,3 +2,5 @@
 /.php_cs.cache
 /build
 /tools
+/vendor
+/composer.lock
