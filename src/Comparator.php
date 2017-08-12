@@ -20,7 +20,7 @@ class Comparator extends BaseComparator
         return $expected instanceof Comparable && $actual instanceof Comparable;
     }
 
-    public function assertEquals($expected, $actual, $delta = 0.0, $canonicalize = false, $ignoreCase = false, array &$processed = array())
+    public function assertEquals($expected, $actual, $delta = 0.0, $canonicalize = false, $ignoreCase = false, array &$processed = [])
     {
         if ($expected->compareTo($actual) !== 0) {
             throw new ComparisonFailure(
