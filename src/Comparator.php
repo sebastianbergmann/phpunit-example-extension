@@ -13,14 +13,14 @@ namespace PHPUnit\ExampleExtension;
 use SebastianBergmann\Comparator\Comparator as BaseComparator;
 use SebastianBergmann\Comparator\ComparisonFailure;
 
-class Comparator extends BaseComparator
+final class Comparator extends BaseComparator
 {
-    public function accepts($expected, $actual)
+    public function accepts($expected, $actual): bool
     {
         return $expected instanceof Comparable && $actual instanceof Comparable;
     }
 
-    public function assertEquals($expected, $actual, $delta = 0.0, $canonicalize = false, $ignoreCase = false, array &$processed = [])
+    public function assertEquals($expected, $actual, $delta = 0.0, $canonicalize = false, $ignoreCase = false, array &$processed = []): void
     {
         if ($expected->compareTo($actual) !== 0) {
             throw new ComparisonFailure(

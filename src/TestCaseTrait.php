@@ -17,7 +17,7 @@ trait TestCaseTrait
     /**
      * @beforeClass
      */
-    public static function init()
+    public static function init(): void
     {
         $factory = ComparatorFactory::getInstance();
 

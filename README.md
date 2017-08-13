@@ -25,7 +25,7 @@ The example below shows how to configure PHPUnit to load all `*.phar` files foun
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/6.0/phpunit.xsd"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/6.3/phpunit.xsd"
          extensionsDirectory="tools/phpunit.d">
 </phpunit>
 ```
@@ -35,8 +35,8 @@ PHPUnit will only load a an extension PHAR if it provides valid manifest informa
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
 <phar xmlns="https://phar.io/xml/manifest/1.0">
-    <contains name="phpunit/phpunit-example-extension" version="2.0.1" type="extension">
-        <extension for="phpunit/phpunit" compatible="^5.7 || ^6.0"/>
+    <contains name="phpunit/phpunit-example-extension" version="3.0.0" type="extension">
+        <extension for="phpunit/phpunit" compatible="^6.3"/>
     </contains>
 
     <copyright>
@@ -45,7 +45,7 @@ PHPUnit will only load a an extension PHAR if it provides valid manifest informa
     </copyright>
 
     <requires>
-        <php version="^5.6 || ^7.0"/>
+        <php version="^7.1"/>
     </requires>
 </phar>
 ```
@@ -56,11 +56,11 @@ When verbose output is activated, PHPUnit will print loaded extension PHARs:
 
 ```
 $ phpunit --verbose tests
-PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+PHPUnit 6.3.0 by Sebastian Bergmann and contributors.
 
-Runtime:       PHP 7.1.4 with Xdebug 2.5.3
+Runtime:       PHP 7.1.8 with Xdebug 2.5.5
 Configuration: /home/sb/example/phpunit.xml
-Extension:     phpunit/phpunit-example-extension 2.0.1
+Extension:     phpunit/phpunit-example-extension 3.0.0
 
 .                                                                   1 / 1 (100%)
 

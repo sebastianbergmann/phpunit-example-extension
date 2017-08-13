@@ -12,10 +12,5 @@ namespace PHPUnit\ExampleExtension;
 
 interface Comparable
 {
-    /**
-     * @param Comparable $other
-     *
-     * @return int
-     */
-    public function compareTo(Comparable $other);
+    public function compareTo(Comparable $other): int;
 }
