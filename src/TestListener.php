@@ -10,7 +10,7 @@
 
 namespace PHPUnit\ExampleExtension;
 
-use PHPUnit\Framework\TestListenerInterface;
+use PHPUnit\Framework\TestListener as TestListenerInterface;
 use PHPUnit\Framework\TestListenerDefaultImplementation;
 use PHPUnit\Framework\Test;
 use PHPUnit\Framework\TestCase;
