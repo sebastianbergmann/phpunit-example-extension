@@ -20,7 +20,7 @@ class MyPrinter extends Printer implements TestListener
 {
     use TestListenerDefaultImplementation;
 
-    public function startTest(Test $test)
+    public function startTest(Test $test): void
     {
         if (!$test instanceof TestCase) {
             return;

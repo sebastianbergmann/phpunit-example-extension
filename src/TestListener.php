@@ -19,7 +19,7 @@ class TestListener implements TestListenerInterface
 {
     use TestListenerDefaultImplementation;
 
-    public function startTest(Test $test)
+    public function startTest(Test $test): void
     {
         if (!$test instanceof TestCase) {
             return;
